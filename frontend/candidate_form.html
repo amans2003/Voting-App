@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Registration - Voting App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-bg">
+    <div class="center-screen">
+        <div class="container center">
+            <h2>Candidate Registration</h2>
+            <form id="candidateForm" class="material-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="party">Party</label>
+                    <input type="text" id="party" name="party" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <button type="submit" class="submit-btn">See Results</button>
+                <div id="candidateFormError" class="form-error"></div>
+            </form>
+        </div>
+    </div>
+    <script src="candidate_form.js"></script>
+</body>
+</html> 

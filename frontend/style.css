@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #D2D0A0;
+    color: #222;
+}
+.landing-bg, .center-screen {
+    background: linear-gradient(135deg, #D2D0A0 0%, #9EBC8A 100%);
+}
+.role-bg {
+    background: #D2D0A0;
+    color: #000;
+}
+.role-bg .container, .role-bg .container * {
+    color: #000 !important;
+}
+.form-bg {
+    background: linear-gradient(135deg, #9EBC8A 0%, #537D5D 100%);
+}
+.vote-bg {
+    background: linear-gradient(135deg, #73946B 0%, #537D5D 100%);
+}
+.results-bg {
+    background: linear-gradient(135deg, #537D5D 0%, #D2D0A0 100%);
+}
+.container, .card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(115,148,107,0.18);
+    padding: 48px 36px 36px 36px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-title, h1, h2 {
+    color: #537D5D;
+}
+button, .submit-btn, .google-btn-pro, .role-btn {
+    background: #73946B;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(83,125,93,0.15);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover, .submit-btn:hover, .google-btn-pro:hover, .role-btn:hover {
+    background: #537D5D;
+}
+input {
+    width: 100%;
+    background: #D2D0A0;
+    border: 1.5px solid #9EBC8A;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+input:focus {
+    border: 1.5px solid #537D5D;
+    outline: none;
+    background: #9EBC8A;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1px;
+}
+.form-group label {
+    font-size: 0.98rem;
+    color: #537D5D;
+    margin-bottom: 4px;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-left: 8px;
+}
+.form-group input {
+    width: 90%;
+    padding: 8px 12px;
+    border: 1.5px solid #9EBC8A;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #ffffff;
+    transition: border 0.2s;
+    text-align: start;
+}
+.form-error {
+    color: #e74c3c;
+    font-size: 0.98rem;
+    margin-top: 8px;
+    min-height: 20px;
+}
+.form-footer {
+    margin-top: 18px;
+    font-size: 0.98rem;
+    color: #555;
+}
+.form-footer a {
+    color: #537D5D;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.result-item-pro {
+    background: #D2D0A0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(115,148,107,0.08);
+    padding: 18px 20px;
+    margin: 14px 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #537D5D;
+    font-weight: 500;
+}
+.votes {
+    color: #9EBC8A;
+    font-weight: 700;
+    margin-left: 18px;
+}
+@media (max-width: 500px) {
+    .container, .card {
+        padding: 24px 8vw 18px 8vw;
+    }
+    .main-title, h1, h2 {
+        font-size: 1.3rem;
+    }
+    button, input {
+        font-size: 0.95rem;
+    }
+}
+.material-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.role-btns {
+    display: flex;
+    gap: 24px;
+}
+.role-btn {
+    min-width: 120px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.role-btn.user {
+    background: D2D0A0;
+    color: F7F7F7;
+}
+.role-btn.user:hover {
+    background: #185a9d;
+}
+.role-btn.candidate {
+    background:D2D0A0;
+    color: F7F7F7;
+}
+.role-btn.candidate:hover {
+    background: #d76d77;
+}
+.google-btn {
+    background: #fff;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(66,133,244,0.15);
+    cursor: pointer;
+}
+.google-btn:hover {
+    background: #f1f1f1;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+@media (max-width: 500px) {
+    .material-form {
+        gap: 12px;
+    }
+    .form-footer {
+        font-size: 0.95rem;
+    }
+}
+.center-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-details-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(83,125,93,0.10);
+    padding: 24px 18px;
+    margin-top: 18px;
+    width: 100%;
+    max-width: 350px;
+    font-size: 1.05rem;
+    color: #537D5D;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.candidates-list-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    margin: 18px 0 24px 0;
+}
+.candidate-radio-label {
+    display: flex;
+    align-items: center;
+    font-size: 1.08rem;
+    gap: 10px;
+    padding: 6px 0;
+}
+.candidate-radio-label input[type="radio"] {
+    accent-color: #537D5D;
+    width: 18px;
+    height: 18px;
+} 

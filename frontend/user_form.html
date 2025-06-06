@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - Voting App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-bg">
+    <div class="center-screen">
+        <div class="container center">
+            <h2>User Registration</h2>
+            <form id="userForm" class="material-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" id="mobile" name="mobile">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="aadharCardNumber">Aadhar Card Number</label>
+                    <input type="text" id="aadharCardNumber" name="aadharCardNumber" pattern="\d{12}" maxlength="12" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Register & Continue to Vote</button>
+                <div id="userFormError" class="form-error"></div>
+            </form>
+            <div class="form-footer">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="user_form.js"></script>
+</body>
+</html> 

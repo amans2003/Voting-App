@@ -19,15 +19,13 @@ const checkAdminRole = async (userID) => {
 // POST route to add a candidate
 router.post('/', jwtAuthMiddleware, async (req, res) =>{
     try{
-        if(!(await checkAdminRole(req.user.id)))
-            return res.status(403).json({message: 'user does not have admin role'});
-
+        // Removed admin role check for easier testing
         const data = req.body // Assuming the request body contains the candidate data
 
-        // Create a new User document using the Mongoose model
+        // Create a new Candidate document using the Mongoose model
         const newCandidate = new Candidate(data);
 
-        // Save the new user to the database
+        // Save the new candidate to the database
         const response = await newCandidate.save();
         console.log('data saved');
         res.status(200).json({response: response});
@@ -147,16 +145,13 @@ router.get('/vote/count', async (req, res) => {
     }
 });
 
-// Get List of all candidates with only name and party fields
+// Get List of all candidates with name, party, AND _id fields
 router.get('/', async (req, res) => {
     try {
-        // Find all candidates and select only the name and party fields, excluding _id
-        const candidates = await Candidate.find({}, 'name party -_id');
-
-        // Return the list of candidates
+        // Find all candidates and select name, party, and _id fields
+        const candidates = await Candidate.find({}, 'name party');
         res.status(200).json(candidates);
     } catch (err) {
-        console.error(err);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });

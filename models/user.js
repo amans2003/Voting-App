@@ -38,6 +38,11 @@ const userSchema = new mongoose.Schema({
     isVoted: {
         type: Boolean,
         default: false
+    },
+    votedFor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Candidate',
+        default: null
     }
 });
 
