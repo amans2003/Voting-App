@@ -81,18 +81,6 @@ Voting-App/
 
 ---
 
-## 📸 Screenshots
-
-You can test this project using **Postman** or the built-in frontend pages:
-
-> Sample Postman vote result request:
-![Postman Screenshot](./screenshots/postman-vote.png)
-
-> User Profile View:
-![Profile Screenshot](./screenshots/profile.png)
-
----
-
 ## 💻 How to Run
 
 ```bash
