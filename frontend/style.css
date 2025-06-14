@@ -122,7 +122,11 @@ input:focus {
     font-weight: 500;
 }
 .votes {
+<<<<<<< HEAD
     color: #9EBC8A;
+=======
+    color: rgb(77, 85, 204);
+>>>>>>> c23b58f (Initial commit or project update)
     font-weight: 700;
     margin-left: 18px;
 }

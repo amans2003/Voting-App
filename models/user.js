@@ -38,7 +38,11 @@ const userSchema = new mongoose.Schema({
     isVoted: {
         type: Boolean,
         default: false
+<<<<<<< HEAD
     },
+=======
+    },          
+>>>>>>> c23b58f (Initial commit or project update)
     votedFor: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Candidate',

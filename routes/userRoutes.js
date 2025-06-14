@@ -90,11 +90,19 @@ router.get('/profile', jwtAuthMiddleware, async (req, res) => {
             path: 'votedFor',
             select: 'name party'
         });
+<<<<<<< HEAD
+=======
+        console.log("populated user",user);
+>>>>>>> c23b58f (Initial commit or project update)
         let votedForHtml = '<div><strong>Voted For:</strong> Not voted yet</div>';
         if (user.votedFor && user.votedFor.name) {
             votedForHtml = `<div><strong>Voted For:</strong> ${user.votedFor.name} (${user.votedFor.party})</div>`;
         }
+<<<<<<< HEAD
         res.status(200).json({user, votedForHtml});
+=======
+        res.status(200).json({user});
+>>>>>>> c23b58f (Initial commit or project update)
     }catch(err){
         console.error(err);
         res.status(500).json({ error: 'Internal Server Error' });

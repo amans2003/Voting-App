@@ -124,11 +124,20 @@ router.get('/vote/:candidateID', jwtAuthMiddleware, async (req, res)=>{
     }
 });
 
+<<<<<<< HEAD
 // vote count 
 router.get('/vote/count', async (req, res) => {
     try{ 
         // Find all candidates and sort them by voteCount in descending order
         const candidate = await Candidate.find().sort({voteCount: 'desc'});
+=======
+
+// // vote count 
+router.get('/vote/count', async (req, res) => {
+    try{ 
+        // Find all candidates and sort them by voteCount in descending order
+        const candidate = await Candidate.find().sort({voteCount: -1 });
+>>>>>>> c23b58f (Initial commit or project update)
 
         // Map the candidates to only return their name and voteCount
         const voteRecord = candidate.map((data)=>{
@@ -149,9 +158,16 @@ router.get('/vote/count', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         // Find all candidates and select name, party, and _id fields
+<<<<<<< HEAD
         const candidates = await Candidate.find({}, 'name party');
         res.status(200).json(candidates);
     } catch (err) {
+=======
+      const candidates = await Candidate.find({}, 'name party voteCount');
+        res.status(200).json(candidates);
+    } catch (err) {
+         console.error("Error fetching candidates:", err.message);
+>>>>>>> c23b58f (Initial commit or project update)
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });

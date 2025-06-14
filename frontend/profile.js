@@ -14,6 +14,10 @@ async function loadProfile() {
             return;
         }
         const data = await res.json();
+<<<<<<< HEAD
+=======
+        console.log("User data from backend:" ,data);
+>>>>>>> c23b58f (Initial commit or project update)
         const user = data.user;
         let votedForHtml = '<div><strong>Voted For:</strong> Not voted yet</div>';
         if (user.isVoted && user.votedFor && user.votedFor.name) {
