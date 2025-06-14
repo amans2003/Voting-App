@@ -93,13 +93,6 @@ You can test this project using **Postman** or the built-in frontend pages:
 
 ---
 
-## 🧠 AI Variant (Optional)
-
-Integrated with **Google Gemini API** using Google Cloud Console API key under route `/api/content`.  
-*Only applicable if AI version is enabled.*
-
----
-
 ## 💻 How to Run
 
 ```bash
