@@ -17,11 +17,7 @@ async function loadResults() {
     const resultsList = document.getElementById('resultsList');
     resultsList.innerHTML = '<div>Loading results...</div>';
     try {
-<<<<<<< HEAD
-        const res = await fetch('/candidate/vote/count');
-=======
         const res = await fetch('/candidate');
->>>>>>> c23b58f (Initial commit or project update)
         const results = await res.json();
         resultsList.innerHTML = '';
         if (results.length === 0) {
@@ -31,11 +27,7 @@ async function loadResults() {
         results.forEach(candidate => {
             const div = document.createElement('div');
             div.className = 'result-item-pro';
-<<<<<<< HEAD
-            div.innerHTML = `<strong>Party:</strong> ${candidate.party} <span class='votes'>Votes: ${candidate.count}</span>`;
-=======
             div.innerHTML = `<strong>Party:</strong> ${candidate.party} <span class='votes'>Votes: ${candidate.voteCount}</span>`;
->>>>>>> c23b58f (Initial commit or project update)
             resultsList.appendChild(div);
         });
     } catch (err) {
