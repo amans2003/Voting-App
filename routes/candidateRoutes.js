@@ -158,16 +158,10 @@ router.get('/vote/count', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         // Find all candidates and select name, party, and _id fields
-<<<<<<< HEAD
-        const candidates = await Candidate.find({}, 'name party');
-        res.status(200).json(candidates);
-    } catch (err) {
-=======
       const candidates = await Candidate.find({}, 'name party voteCount');
         res.status(200).json(candidates);
     } catch (err) {
          console.error("Error fetching candidates:", err.message);
->>>>>>> c23b58f (Initial commit or project update)
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
